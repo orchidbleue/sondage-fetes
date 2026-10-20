@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fc">
+  <meta name="description" content="Sondage des besoins en services pendant le temps des Fêtes 2026–2027 du Centre d’activités l’Orchidbleue.">
+  <title>Sondage des Fêtes · L’Orchidbleue</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,30,1;9..144,600,30,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="background-blur background-blur--top" aria-hidden="true"></div>
+  <div class="background-blur background-blur--bottom" aria-hidden="true"></div>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <a class="brand" href="https://orchidbleue.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le site du Centre d’activités l’Orchidbleue (nouvel onglet)">
+        <span class="brand-flower" aria-hidden="true">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 25.6C16.3 24.7 12.7 16.9 17.1 11.9c4.4-5 11.8-.1 9 13.7Z" fill="#6A7DE6"/><path d="M26.2 25.5c.3-9.8 6.6-14.8 12.3-11.5 5.7 3.4 2.5 12-12.3 11.5Z" fill="#8499EE"/><path d="M26 25.8c9.4-2.9 16.7 1.7 15.6 8.1-1 6.4-10.2 6.4-15.6-8.1Z" fill="#B8A3EB"/><path d="M25.8 25.8c5.6 8 3.3 16-3.2 17-6.5 1-9-7.9 3.2-17Z" fill="#9DC8E6"/><path d="M25.8 25.6c-5.6 8-14 8.2-17.1 2.5-3-5.7 4.6-11.2 17.1-2.5Z" fill="#B6DCE9"/><circle cx="26" cy="25.5" r="5.1" fill="#FBFAFF"/><circle cx="26" cy="25.5" r="2.1" fill="#5366D4"/></svg>
+        </span>
+        <span class="brand-copy"><span class="brand-name">l’Orchidbleue<span class="brand-dot">.</span></span><span class="brand-subtitle">Centre d’activités</span></span>
+      </a>
+      <div class="header-right">
+        <span class="header-season"><span class="header-season-dot"></span> Sondage des Fêtes <span class="header-year">2026—2027</span></span>
+        <div class="progress" aria-label="Progression du sondage"><span class="progress-dot is-active" data-progress="intro"></span><span class="progress-line"></span><span class="progress-dot" data-progress="calendar"></span><span class="progress-line"></span><span class="progress-dot" data-progress="success"></span></div>
+      </div>
+    </header>
+
+    <div class="preview-banner" id="preview-banner" hidden role="status"><span class="preview-bubble" aria-hidden="true">✦</span> <strong>Mode aperçu</strong> — les réponses ne sont pas enregistrées. Configurez Google Sheets avant de partager ce sondage.</div>
+
+    <main id="main">
+      <section class="stage stage--intro" id="intro-stage" data-stage="intro" aria-labelledby="intro-title">
+        <div class="intro-content">
+          <div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✳</span> UN PETIT SONDAGE, UNE GRANDE AIDE</div>
+          <h1 id="intro-title">Les Fêtes,<br> <span class="serif-script">à votre rythme<span class="period">.</span></span></h1>
+          <p class="intro-lead">Aidons-nous à préparer un temps des Fêtes qui répond vraiment aux besoins de vos familles.</p>
+          <p class="placeholder-intro" id="intro-placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <div class="intro-actions"><button class="button button-primary" type="button" id="start-button">Commencer le sondage <span class="button-arrow" aria-hidden="true">↗</span></button><span class="duration"><span aria-hidden="true">◷</span> Moins de 2 minutes</span></div>
+          <div class="intro-divider"></div>
+          <div class="intro-meta"><span class="meta-icon" aria-hidden="true">✿</span><span>Pour les parents et les personnes responsables de nos participant·e·s.</span></div>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-orbit art-orbit--one"></div><div class="art-orbit art-orbit--two"></div>
+          <div class="art-flower art-flower--main"><svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".98"><ellipse cx="150" cy="86" rx="42" ry="76" fill="#B5BDF7" transform="rotate(-7 150 86)"/><ellipse cx="211" cy="132" rx="42" ry="76" fill="#C8B6F3" transform="rotate(67 211 132)"/><ellipse cx="184" cy="209" rx="42" ry="76" fill="#A2C9E9" transform="rotate(146 184 209)"/><ellipse cx="105" cy="203" rx="42" ry="76" fill="#B8DCE9" transform="rotate(217 105 203)"/><ellipse cx="90" cy="117" rx="42" ry="76" fill="#879BEA" transform="rotate(292 90 117)"/></g><circle cx="150" cy="153" r="38" fill="#EDECFD"/><circle cx="150" cy="153" r="21" fill="#667BE1"/><circle cx="144" cy="144" r="8" fill="#D8E4FC" opacity=".7"/></svg></div>
+          <div class="art-flower art-flower--small"><svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="30" rx="15" ry="29" fill="#D7D0F7"/><ellipse cx="68" cy="54" rx="15" ry="29" fill="#C4E2EF" transform="rotate(72 68 54)"/><ellipse cx="38" cy="72" rx="15" ry="29" fill="#AAB9F2" transform="rotate(144 38 72)"/><ellipse cx="25" cy="38" rx="15" ry="29" fill="#B7D6E9" transform="rotate(222 25 38)"/><circle cx="49" cy="49" r="13" fill="#F9F8FF"/><circle cx="49" cy="49" r="6" fill="#697DDD"/></svg></div>
+          <div class="floating-note floating-note--top"><span class="note-glow"></span><span>Un calendrier<br><strong>qui vous écoute.</strong></span><span class="note-sparkle">✳</span></div>
+          <div class="floating-calendar"><div class="floating-calendar-header"><span class="floating-dot"></span><span>DÉC 2026</span><span class="floating-more">•••</span></div><div class="floating-day-titles"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span></div><div class="floating-days"><span>21</span><span class="chosen">22<span class="mini-tick">✓</span></span><span>23</span><span class="blocked">24</span><span class="blocked">25</span><span class="chosen">26<span class="mini-tick">✓</span></span></div><div class="floating-calendar-foot"><span class="little-circle">✓</span> 2 jours sélectionnés</div></div>
+          <div class="floating-note floating-note--bottom"><span class="note-heart">♥</span> Pour des Fêtes plus douces.</div>
+          <span class="art-sparkle art-sparkle--one">✦</span><span class="art-sparkle art-sparkle--two">✴</span>
+        </div>
+      </section>
+
+      <section class="stage stage--calendar" id="calendar-stage" data-stage="calendar" aria-labelledby="calendar-title" hidden>
+        <div class="stage-topline"><button class="back-link" type="button" id="back-intro"><span aria-hidden="true">←</span> Retour à l’accueil</button><span class="question-counter">QUESTION <strong>01</strong> / 01</span></div>
+        <div class="calendar-intro"><div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✳</span> VOS BESOINS PENDANT LES FÊTES</div><h2 id="calendar-title" tabindex="-1">Quels jours auriez-vous <span class="serif-script">besoin de nous&nbsp;?</span></h2><p>Sélectionnez toutes les dates pour lesquelles vous auriez besoin de nos services. Vous pouvez en choisir plusieurs.</p></div>
+        <div class="survey-layout">
+          <div class="date-groups" aria-label="Choix des journées">
+            <article class="week-card"><div class="week-header"><div><span class="week-number">01 <span class="week-dash">/</span> 02</span><h3>Semaine du 21 décembre</h3></div><div class="week-range">21 — 26 DÉC.</div></div><div class="dates-grid" id="week-one"></div></article>
+            <article class="week-card"><div class="week-header"><div><span class="week-number">02 <span class="week-dash">/</span> 02</span><h3>Semaine du 28 décembre</h3></div><div class="week-range">28 DÉC. — 02 JANV.</div></div><div class="dates-grid" id="week-two"></div></article>
+            <div class="calendar-legend"><span><i class="legend-square legend-square--free"></i> Disponible</span><span><i class="legend-square legend-square--selected"></i> Sélectionné</span><span><i class="legend-square legend-square--blocked"></i> Journée non offerte</span></div>
+          </div>
+          <aside class="selection-sidebar" aria-labelledby="selection-title"><div class="sidebar-card"><span class="sidebar-icon" aria-hidden="true">✽</span><div class="sidebar-eyebrow">VOTRE RÉPONSE</div><h3 id="selection-title">Votre sélection</h3><div class="selection-counter"><span id="selection-count" aria-live="polite">0</span> <span id="selection-count-label">journée sélectionnée</span></div><div class="selection-chips" id="selection-chips"><p class="empty-selection">Vos journées choisies apparaîtront ici. <span aria-hidden="true">✦</span></p></div><div class="sidebar-divider"></div><label class="no-need-option" for="no-need"><input id="no-need" type="checkbox"><span class="custom-check" aria-hidden="true">✓</span><span>Nous n’aurons besoin d’aucun service pendant ces dates.</span></label><button class="button button-primary button-submit" type="button" id="submit-button" disabled>Envoyer ma réponse <span aria-hidden="true">↗</span></button><p class="submit-footnote"><span aria-hidden="true">◇</span> Sondage anonyme et sans engagement.</p><p class="form-error" id="submit-error" role="alert" hidden></p></div></aside>
+        </div>
+      </section>
+
+      <section class="stage stage--success" id="success-stage" data-stage="success" aria-labelledby="success-title" hidden>
+        <div class="success-container"><div class="success-emblem" aria-hidden="true"><span class="success-orbit"></span><svg viewBox="0 0 110 110" fill="none"><path d="M55 49C27 25 47 7 58 22c12-25 38-4 12 29 34-8 43 19 12 30-5 29-29 28-32-4-27 20-46-2-19-26 7-6 15-8 24-2Z" fill="#B6C2F5"/><circle cx="55" cy="56" r="23" fill="#EFF0FF"/><path d="m45 56 7 7 15-17" stroke="#5269D5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="spark success-spark--one">✦</span><span class="spark success-spark--two">✧</span></div><div class="eyebrow" id="success-eyebrow">MERCI POUR VOTRE PARTICIPATION</div><h2 id="success-title">C’est noté, <span class="serif-script">merci beaucoup&nbsp;!</span></h2><p class="success-description" id="success-description">Votre réponse a bien été enregistrée. Vos choix nous aideront à mieux planifier nos services pendant le temps des Fêtes.</p><div class="success-summary"><div class="success-summary-heading"><span>RÉCAPITULATIF DE VOTRE RÉPONSE</span><span class="success-summary-icon">✳</span></div><div class="success-summary-days" id="success-summary-days"></div></div><button class="button button-outline" type="button" id="edit-button">Modifier ma réponse <span aria-hidden="true">↗</span></button><p class="success-footnote">Un grand merci de la part de toute l’équipe de l’Orchidbleue <span aria-hidden="true">♥</span></p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Centre d’activités l’Orchidbleue</span><span class="footer-middle">Fait avec attention <span aria-hidden="true">✳</span> pour nos familles.</span><a href="https://orchidbleue.ca/" target="_blank" rel="noopener noreferrer">orchidbleue.ca <span aria-hidden="true">↗</span></a></footer>
+  </div>
+  <iframe id="response-frame" name="orchid-response-frame" title="Confirmation du sondage" hidden tabindex="-1"></iframe>
+  <form id="response-form" target="orchid-response-frame" method="POST" hidden><input type="hidden" name="payload" id="response-payload"></form>
+</body>
+</html>
